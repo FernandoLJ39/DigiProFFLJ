@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bb0dd19d0eb423891cc9e9051bd0d61" Name="Diagram1">
+        <EntityTypeShape EntityType="FLunaPruebaDigiProModel.Alumno" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FLunaPruebaDigiProModel.AlumnoMateria" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FLunaPruebaDigiProModel.Materia" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="FLunaPruebaDigiProModel.FK__AlumnoMat__IdAlu__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="FLunaPruebaDigiProModel.FK__AlumnoMat__IdMat__22AA2996" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

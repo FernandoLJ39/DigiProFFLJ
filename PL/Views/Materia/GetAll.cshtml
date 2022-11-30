@@ -1,0 +1,51 @@
+﻿@model ML.Materia
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h2>Materia</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h5>Seleccione una materia para editarla o + para agregar una materia...</h5>
+        <hr />
+    </div>
+</div>
+
+<div style="float:right">
+    @Html.ActionLink("+", "Form", "Materia", htmlAttributes: new { @class = "btn btn-success" })
+</div>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <td class="text-center" style=" font-weight:bold;">Editar</td>
+
+            <td class="hidden">IdMateria</td>
+            <td class="text-center" style=" font-weight:bold;">Nombre</td>
+            <td class="text-center" style=" font-weight:bold;">Costo</td>
+
+            <td class="text-center" style=" font-weight:bold;">Eliminar</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (ML.Materia materia in Model.Materias)
+        {
+            <tr>
+                <td class="text-center"><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Materia", new { IdMateria = materia.IdMateria })"></a></td>
+
+                <td class="hidden">@materia.IdMateria</td>
+                <td>@materia.Nombre</td>
+                <td>@materia.Costo</td>
+
+                <td class="text-center"><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Materia", new { IdMateria = materia.IdMateria })" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
