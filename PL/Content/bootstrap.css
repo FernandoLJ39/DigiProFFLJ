@@ -291,7 +291,8 @@ th {
     }
 
     .navbar {
-        display: none;
+        width: 100%;
+        text-align: left;
     }
 
     .btn > .caret,
@@ -5243,13 +5244,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav {
-    margin: 7.5px -15px;
+    width: 100%;
+    text-align: left;
 }
 
     .navbar-nav > li > a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        line-height: 20px;
+        float: none;
+        display: inline;
     }
 
 @media (max-width: 767px) {
