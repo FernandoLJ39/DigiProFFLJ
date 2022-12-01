@@ -17,24 +17,49 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-
+        <p></p>
 
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>  @Html.ActionLink("DigiPro", "Index", "Home", null, new { @class = "navbar-brand" })</li>
-                <li>@Html.ActionLink("Alumno", "GetAll", "Alumno")</li>
+            <ul class="nav navbar-nav navbar-left">
+                <li>  <a class="btn-warning " href=@Html.ActionLink("DigiPro", "Index", "Home", null, new { @class = "navbar-brand" })</a></li>
+                <p></p>
 
-                <li>@Html.ActionLink("Materia", "GetAll", "Materia")</li>
+                <h1></h1>
+            </ul>
+        </div>
+        
+        <hr />
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a class="btn btn-default " href=@Html.ActionLink("Materia", "GetAll", "Materia")</li>
+                <p></p>
 
-                <li>@Html.ActionLink("Asignación de materias", "GetAll", "AlumnoMateria")</li>
-
+                <h1></h1>
             </ul>
 
         </div>
+        <hr />
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a class=" btn btn-primary " href=@Html.ActionLink("Asignación de materias", "GetAll", "AlumnoMateria")</li>
+                <p></p>
 
-
+                <h1></h1>
+            </ul>
         </div>
         
+        <hr />
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+
+                <li><a class=" btn btn-default" href=@Html.ActionLink("Alumno", "GetAll", "Alumno")</a></li>
+
+            </ul>
+        </div>
+
+        <hr />
+
+
         <div class="container body-content">
             @RenderBody()
             <hr />
