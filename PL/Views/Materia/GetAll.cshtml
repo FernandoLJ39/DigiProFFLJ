@@ -21,7 +21,7 @@
     @Html.ActionLink("+", "Form", "Materia", htmlAttributes: new { @class = "btn btn-success" })
 </div>
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered table-responsive" id="lblMateria">
     <thead>
         <tr>
             <td class="text-center" style=" font-weight:bold;">Editar</td>
@@ -49,3 +49,33 @@
         }
     </tbody>
 </table>
+@section Scripts
+    {
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.material.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#tblMateria').DataTable({
+                searching: true,
+                "lengthMenu": [[5, 10, 15, 20, -1], [5, 10, 15, 20, "All"]],
+                autoWidth: true,
+                columnDefs: [
+                    {
+                        targets: ['_all'],
+                        className: 'mdc-data-table__cell',
+                    },
+                ],
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json",
+                },
+            });
+        });
+
+
+    </script>
+
+}
