@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - DigiPro Fernando Felipe Luna Jimenez</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -17,53 +17,27 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <p></p>
+       
 
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <p> <a class="btn btn" href="@Url.Action("Index", "Home")">INICIO &raquo;</a></p>
-              
+            <ul class="nav navbar-nav">
+                <p> <a class="btn btn" href="@Url.Action("Index", "Home")">INICIO &raquo;</a> <a class="btn btn-info" href="@Url.Action("GetAll", "Materia")">Materia &raquo;</a><a class="btn btn-warning" href="@Url.Action("GetAll", "AlumnoMateria")">Asignar materia &raquo;</a><a class="btn btn-success" href="@Url.Action("GetAll", "Alumno")">Alumno &raquo;</a></p>
             </ul>
         </div>
-        
-        <hr />
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <p><a class="btn btn-info" href="@Url.Action("GetAll", "Materia")">Materia &raquo;</a></p>
-
-            </ul>
-
-        </div>
-        <hr />
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <p><a class="btn btn-warning" href="@Url.Action("GetAll", "AlumnoMateria")">Asignar materia &raquo;</a></p>
-
-            </ul>
-        </div>
-        
-        <hr />
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-
-                <p><a class="btn btn-success" href="@Url.Action("GetAll", "Alumno")">Alumno &raquo;</a></p>
-
-            </ul>
-        </div>
-
-        <hr />
-
+    </div>
+    
 
         <div class="container body-content">
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                <p>&copy; @DateTime.Now.Year - DigiPro Fernando fel</p>
             </footer>
         </div>
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
+    
 </body>
 </html>
